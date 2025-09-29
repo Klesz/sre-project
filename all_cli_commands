@@ -1,0 +1,22 @@
+11 kubectl get pods -n kube-system
+29 kubectl get storageclasses
+30 kubectl apply -f .\ghost.yaml
+36 kubectl apply -f .\gp2-csi.yaml
+48 kubectl describe storageclasses
+49 kubectl get storageclasses
+51 kubectl create ns argo
+52 kubectl create ns app
+53 kubectl.exe get ns
+55 helm install argo-cd .\argo-cd\ -n argo
+57 helm dependency build argo-cd
+58 helm install argo-cd .\argo-cd\ -n argo
+59 kubectl get pods -n argo
+60 kubectl get svc -n argo
+# bitnami docker image was referenced from a wrongly set image repository
+65 helm upgrade argo-cd ./argo-cd -n argo
+86 kubectl get pods -n argo
+87 kubectl delete pod argo-cd-app-controller-79b8f4f649-2gjk8 -n argo
+88 kubectl delete pod argo-cd-redis-master-0 -n argo
+89 kubectl delete pod argo-cd-repo-server-5646dbfb8b-jwxfs -n argo
+90 kubectl delete pod argo-cd-server-7d78d4fb6b-b4sp5 -n argo
+91 kubectl get pods -n argo
